@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [
+        {
+          productname: "pen",
+          descripation: "buy this product",
+          price:"200",
+          rating:" 4 star",
+          review:"no review",
+          available: false,
+        },
+        {
+          productname: "book",
+          descripation: "buy this product",
+          price:"100",
+          rating:" 5 star",
+          review:"good review",
+          available: true,
+        },
+        {
+          productname: "bag",
+          descripation: "buy this product",
+          price:"400",
+          rating:" 3.5 star",
+          review:" low review",
+          available: true,
+        },
+        {
+          productname: "gold braclete",
+           descripation: "buy this product",
+          price:"450",
+          rating:" 5 star",
+          review:"mediam review",
+          available: false,
+        },
+        {
+          productname: "gold chain",
+          descripation: "buy this product",
+          price:"400",
+          rating:" 1.2 star",
+          review:"high review",
+          available: true,
+        },
+        {
+          productname: "women cloth",
+          descripation: "buy this product",
+          price:"350",
+          rating:" 3.9 star",
+          review:"most popular review",
+          available: true,
+        }
+        ,
+        {
+          productname: "men cloth",
+          descripation: "buy this product",
+          price:"490",
+          rating:" 5 star",
+          review:"best review",
+          available: true,
+        }
+        ,
+        {
+          productname: "mens tishart",
+          descripation: "buy this product",
+          price:"250",
+          rating:" 2.1 star",
+          review:"no review",
+          available: true,
+        }
+
+      ];
+
+
+        const arrr =prompt(" enter youre product name")
+      let result = arr.filter((val) =>val.productname === arrr && val.available === true && val.price >"200" && val.price < "500");
+      console.log(result);
+
+
+    //   console.log(arr);
+
+    //   arr.map((val, ind) => {
+    //       console.log(val.name);
+    //       if (val.name === "bhagat") {
+    //         console.log("bhagat malyo");
+    //       } else {
+    //         console.log("khovai gayo");
+    //       }
+    //     });
+
+    //     console.log(arr[4].name);
+    </script>
+</body>
+</html>
