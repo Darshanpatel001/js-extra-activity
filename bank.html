@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Bank {
+        constructor() {
+          this.name = prompt("Enter Name");
+          this.age = parseInt(prompt("Enter age"));
+          this.mobile_No = parseInt(prompt("Enter Number"));
+          this.email = prompt("Enter Email");
+          this.amount=5000
+        }
+        createAc() {
+          console.log("youre name = "+this.name);
+          console.log("youre age = "+this.age);
+          console.log("youre mobile no = "+this.mobile_No);
+          console.log("youre email = "+this.email);
+          console.log("youre amount = "+this.amount);
+
+          if (this.age >= 18 && this.email === this.email) {
+            console.log("Account successfull created");
+            console.log("youre account number = "+Math.round(Math.random() * 10000000000000));
+          } else {
+            console.log("invalid details");
+          }
+        }
+       deposite(inr){
+        this.amount+=inr;
+        console.log(`${inr} is deposite`)
+       }
+       withdraw(total){
+        this.amount-=total;
+        console.log(`youre withdraw amout is =${total}`);
+
+       }
+       chekbalance(){
+        console.log(`youre balance is: ${this.amount}`);
+       }
+      }
+
+      s1 = new Bank();
+      s1.createAc();
+      s1.deposite(10000);
+      s1.withdraw(14000)
+      s1.chekbalance();
+
+
+      
+    </script>
+  </body>
+</html>
