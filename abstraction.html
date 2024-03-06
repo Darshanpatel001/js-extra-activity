@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function employee(name, age, departmen, salary, bonus, tex, extraaeword ,allsalary) {
+            let namee = name
+            let agee = age
+            let department = departmen
+            let salaryy = salary
+            let bonuss = bonus
+            let texx = tex
+            let extraaewordd = extraaeword
+            let allsalaryy=allsalary
+
+
+
+            let salaryslipt = () => {
+
+                allsalaryy = salaryy + bonuss + extraaewordd - texx
+                return allsalaryy
+
+            }
+            this.print = () => {
+                console.log("employee name :- "+name);
+                console.log("employee age :- "+agee);
+                console.log("employee department :- "+department);
+               
+               
+                let result = salaryslipt();
+                console.log("youre all salary slip is ready you can see = ", result);
+            };
+        }
+        let s1 = new employee("darshan", 25, "software engee... ", 120000, 10000, 2500, 1000)
+        s1.print()
+    </script>
+</body>
+
+</html>
