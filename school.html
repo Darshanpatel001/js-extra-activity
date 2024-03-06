@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            class School {
+                constructor(s_name, department) {
+                    this.s_name = s_name;
+                    this.department = department;
+                }
+
+                printDetail() {
+                    console.log(
+                        `school name is : ${this.s_name},
+department is : ${this.department}`
+                    );
+                }
+            }
+       
+
+            class Student_info extends School {
+                constructor(s_name, department, name, id_no, email)
+                {
+                    super(s_name, department)
+                    this.name = name;
+                    this.id_no = id_no;
+                    this.email = email;
+                }
+
+                printInfo(){
+                    console.log(
+                        `student name is : ${this.name}
+student id_no is : ${this.id_no},
+student email is : ${this.email}`
+                    );
+                }
+            }
+
+            class student_fees extends Student_info{
+                constructor(s_name, department, name, id_no, email, total_fees, completed_fees, remining_fees){
+                    super(s_name, department, name, id_no, email)
+                    this.total_fees = total_fees;
+                    this.completed_fees = completed_fees;
+                    this.remining_fees =  total_fees - completed_fees;
+                }
+
+
+                printFees(){
+                    console.log(
+                        `total fees = ${this.total_fees},
+complated fees = ${this.completed_fees},
+remining fees = ${this.total_fees - this.completed_fees}`
+                    )
+                }
+
+            }
+            class student_portal extends student_fees{
+                constructor(s_name, department, name, id_no, email, total_fees, completed_fees, remining_fees, maths_marks, english_marks, science_marks, average_marks, CGPA){
+                    super(s_name, department, name, id_no, email, total_fees, completed_fees, remining_fees)
+                    this.maths_marks = maths_marks;
+                    this.english_marks = english_marks;
+                    this.science_marks = science_marks;
+                    this.average_marks = average_marks;
+                    this.CGPA = CGPA;
+                }
+
+
+                printResult(){
+                    console.log(
+                        `maths marks = ${this.maths_marks},
+english marks = ${this.english_marks},
+science marks = ${this.science_marks},
+average marks = ${(this.maths_marks + this.english_marks + this.science_marks)/3}
+CGPA = ${((this.maths_marks + this.english_marks + this.science_marks)/3)/10}`
+                    )
+                }
+
+            }
+
+
+            let s1 = new student_portal("r&w", "full-stack","student-1","01", "student-1@gmail.com","10000", "8000", "10000-8000",70 , 80, 90, (70+80+90)/3, ((70+80+90)/3)/10);
+            s1.printDetail();
+            s1.printInfo();
+            s1.printFees();
+            s1.printResult();
+            
+
+        </script>
+
+    </body>
+
+</html>
