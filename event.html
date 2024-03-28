@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resizable Box</title>
+<style>
+  #box {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    transition: all 0.3s ease;
+  }
+  
+    #boxx {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      transition: all 0.3s ease;
+    }
+
+</style>
+</head>
+<body>
+<h1>click function</h1><br><br>
+<div id="box"></div><br>
+<h1>mouseover and mouseout function</h1>
+<div id="boxx"></div>
+<script>
+  
+  const box = document.getElementById('box');
+  box.addEventListener('click', function() {
+    box.style.width = '500px';
+    box.style.height = '500px';
+  });
+  
+</script>
+<br><br><br>
+
+  
+  
+  
+    <script>
+      let boxx=document.getElementById("boxx")
+      boxx.addEventListener("mouseover",function(){
+        boxx.style.width="500px"
+        boxx.style.height="500px"
+  boxx.style.backgroundColor = 'black';
+
+       
+      })
+      boxx.addEventListener('mouseout', function() {
+      boxx.style="none"
+});
+    </script>
+</body>
+</html>
