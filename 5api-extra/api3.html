@@ -1,0 +1,103 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Data</title>
+</head>
+<body>
+    <table  style="width: 100%;" border="1" >
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>title</th>
+            <th>body</th>
+            
+          </tr>
+        </thead>
+        <tbody id="body"></tbody>
+      </table>
+  </body>
+  <script>
+    try{
+        let tbody=document.getElementById("tbody")
+        let data= async()=>{
+        let res = await fetch("https://fakestoreapi.com/products");
+        let resultt = await res.json();
+        console.log(result, "api 3");
+             
+        resultt.map((val, ind)=>{
+           
+            let tr = document.createElement("tr");
+      tr.innerHTML = `
+                    <td style="text-align: center;">${val.id}</td>
+                    <td style="text-align: center;">${val.title}</td>
+                    <td style="text-align: center;">${val.body}</td>
+                   
+                      `;
+      tbody.appendChild(tr);
+        })
+        data()
+    }
+}catch(error)
+    {
+        console.log(error);
+    }
+  </script>
+  </html> -->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Data</title>
+</head>
+<body>
+    <table  style="width: 100%;" border="1" >
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>title</th>
+            <th>price</th>
+            <th>des</th>
+            <th>category</th>
+            <th>image</th>
+            <th>rating</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody id="body"></tbody>
+      </table>
+  
+      <script>
+       try{
+        let tbody = document.getElementById("body");
+  
+  let getData = async () => {
+    let res = await fetch('https://fakestoreapi.com/products');
+    let result = await res.json();
+    console.log(result, "api 2");
+
+    result.map((val, ind) => {
+      let tr = document.createElement("tr");
+      tr.innerHTML = `
+                    <td style="text-align: center;">${val.id}</td>
+                    <td style="text-align: center;">${val.title}</td>
+                    <td style="text-align: center;">${val.price}</td>
+                    <td style="text-align: center;">${val.description}</td>
+                    <td style="text-align: center;">${val.category}</td>
+                    <td style="text-align: center;">${val.image}</td>
+                    <td style="text-align: center;">${val.rating}</td>
+                      `;
+      tbody.appendChild(tr);
+    });
+  };
+
+  getData();
+       }catch(error){
+        console.log(error);
+       }
+      </script>
+</body>
+</html>
